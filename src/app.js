@@ -13,8 +13,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Routes
-const tasksRouter = require('./routes/tasks');
-app.use('/api/tasks', tasksRouter);
+const deliveryRouter = require('./routes/delivery');
+app.use('/api/delivery', deliveryRouter);
 
 // Missing routes
 app.use(notFound);

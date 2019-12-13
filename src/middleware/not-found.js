@@ -11,5 +11,4 @@ const notFound = (request, response, next) => {
 
   next && next();
 }
-
 module.exports = notFound;

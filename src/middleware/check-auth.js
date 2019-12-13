@@ -1,7 +1,7 @@
 const checkAuth = (request, response, next) => {
   const token = request.headers.authorization;
 
-  if(/ZG0xMjQ6YWx1bm9pbmF0ZWw=/.test(token)) {
+  if(/ZG0xMjQ6ZG0xMjQ=/.test(token)) {
     next();
   } else {
     const HttpStatusNotAuthorized = 401;
@@ -15,5 +15,4 @@ const checkAuth = (request, response, next) => {
       .json(errorInfo);
   }
 }
-
 module.exports = checkAuth;

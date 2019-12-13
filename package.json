@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-restful",
+  "name": "DanielAssis-DM124",
   "private": true,
   "scripts": {
     "start": "node ./src/server",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
-    "@types/node": "^12.12.17",
+    "@types/node": "^12.12.12",
     "nodemon": "^2.0.1"
   }
 }
