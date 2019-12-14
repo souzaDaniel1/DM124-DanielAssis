@@ -34,7 +34,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"orderId\": 1,\n    \"customerId\": 1,\n    \"receiverName\": \"Souza\",\n    \"receiverCpf\": \"01234567890\",\n    \"isBuyer\": false,\n    \"dateTime\": \"2019-12-12\",\n    \"local\": \"SRS\"\n}"
+					"raw": "{\n\t\"orderId\": 1,\n    \"customerId\": 1,\n    \"receiverName\": \"Souza\",\n    \"receiverCpf\": \"01234567890\",\n    \"isBuyer\": false,\n    \"dateTime\": \"2019-12-12\",\n    \"local\": \"SRS\",\n    \"status\": \"ENTREGUE\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:9090/api/delivery",
@@ -179,7 +179,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"orderId\": 1,\r\n        \"customerId\": 1,\r\n        \"receiverName\": \"Daniel\",\r\n        \"receiverCpf\": \"00000000000\",\r\n        \"isBuyer\": true,\r\n        \"dateTime\": \"2019-12-11\",\r\n        \"local\": \"SRS\"\r\n    }"
+					"raw": "{\r\n        \"orderId\": 1,\r\n        \"customerId\": 1,\r\n        \"receiverName\": \"Daniel\",\r\n        \"receiverCpf\": \"00000000000\",\r\n        \"isBuyer\": true,\r\n        \"dateTime\": \"2019-12-11\",\r\n        \"local\": \"SRS\",\r\n        \"status\": \"PENDENTE\"\r\n    }"
 				},
 				"url": {
 					"raw": "http://localhost:9090/api/delivery/1",

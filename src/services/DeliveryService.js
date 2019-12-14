@@ -13,7 +13,8 @@ class DeliveryService {
         receiverCpf: delivery.receiverCpf,
         isBuyer: delivery.isBuyer || false,
         dateTime: delivery.dateTime,
-        local: delivery.local
+        local: delivery.local,
+        status: delivery.status || 'PENDENTE'
       };
       db[newDelivery.id] = newDelivery;
       resolve(newDelivery);
@@ -45,6 +46,7 @@ class DeliveryService {
         delivery.isBuyer = hasValue ? updatedDelivery.isBuyer : delivery.isBuyer;
         delivery.dateTime = updatedDelivery.dateTime || delivery.dateTime;
         delivery.local = updatedDelivery.local || delivery.local;
+        delivery.status = updatedDelivery.status || delivery.status;
         resolve(delivery);
       }
       resolve(null);
