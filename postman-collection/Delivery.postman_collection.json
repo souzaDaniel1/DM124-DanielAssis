@@ -6,243 +6,500 @@
 	},
 	"item": [
 		{
-			"name": "Create delivery",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "dm124",
-							"type": "string"
+			"name": "Heroku",
+			"item": [
+				{
+					"name": "Create delivery - Heroku",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "username",
-							"value": "dm124",
-							"type": "string"
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": 1,\n    \"customerId\": 1,\n    \"receiverName\": \"Assis\",\n    \"receiverCpf\": \"01234567890\",\n    \"isBuyer\": false,\n    \"dateTime\": \"2019-11-12\",\n    \"local\": \"SRS\",\n    \"status\": \"ENTREGUE\"\n}"
+						},
+						"url": {
+							"raw": "https://mighty-bastion-41992.herokuapp.com/api/delivery",
+							"protocol": "https",
+							"host": [
+								"mighty-bastion-41992",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delivery"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"orderId\": 1,\n    \"customerId\": 1,\n    \"receiverName\": \"Souza\",\n    \"receiverCpf\": \"01234567890\",\n    \"isBuyer\": false,\n    \"dateTime\": \"2019-12-12\",\n    \"local\": \"SRS\",\n    \"status\": \"ENTREGUE\"\n}"
+				{
+					"name": "Get deliveries - Heroku",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://mighty-bastion-41992.herokuapp.com/api/delivery",
+							"protocol": "https",
+							"host": [
+								"mighty-bastion-41992",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delivery"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:9090/api/delivery",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"api",
-						"delivery"
-					]
+				{
+					"name": "Get delivery by id - Heroku",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://mighty-bastion-41992.herokuapp.com/api/delivery/1",
+							"protocol": "https",
+							"host": [
+								"mighty-bastion-41992",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delivery",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update delivery by id - Heroku",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"orderId\": 1,\r\n        \"customerId\": 1,\r\n        \"receiverName\": \"Daniel\",\r\n        \"receiverCpf\": \"00000000000\",\r\n        \"isBuyer\": true,\r\n        \"dateTime\": \"2019-12-11\",\r\n        \"local\": \"SRS\",\r\n        \"status\": \"PENDENTE\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://mighty-bastion-41992.herokuapp.com/api/delivery/1",
+							"protocol": "https",
+							"host": [
+								"mighty-bastion-41992",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delivery",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete delivery by id - Heroku",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://mighty-bastion-41992.herokuapp.com/api/delivery/2",
+							"protocol": "https",
+							"host": [
+								"mighty-bastion-41992",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delivery",
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "Get deliveries",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "dm124",
-							"type": "string"
+			"name": "Localhost",
+			"item": [
+				{
+					"name": "Create delivery",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "username",
-							"value": "dm124",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://localhost:9090/api/delivery",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"api",
-						"delivery"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get delivery by id",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "dm124",
-							"type": "string"
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": 1,\n    \"customerId\": 1,\n    \"receiverName\": \"Souza\",\n    \"receiverCpf\": \"01234567890\",\n    \"isBuyer\": false,\n    \"dateTime\": \"2019-12-12\",\n    \"local\": \"SRS\",\n    \"status\": \"ENTREGUE\"\n}"
 						},
-						{
-							"key": "username",
-							"value": "dm124",
-							"type": "string"
+						"url": {
+							"raw": "http://localhost:9090/api/delivery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"delivery"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://localhost:9090/api/delivery/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"api",
-						"delivery",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update delivery by id",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "dm124",
-							"type": "string"
+				{
+					"name": "Get deliveries",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "username",
-							"value": "dm124",
-							"type": "string"
-						}
-					]
-				},
-				"method": "PATCH",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n        \"orderId\": 1,\r\n        \"customerId\": 1,\r\n        \"receiverName\": \"Daniel\",\r\n        \"receiverCpf\": \"00000000000\",\r\n        \"isBuyer\": true,\r\n        \"dateTime\": \"2019-12-11\",\r\n        \"local\": \"SRS\",\r\n        \"status\": \"PENDENTE\"\r\n    }"
-				},
-				"url": {
-					"raw": "http://localhost:9090/api/delivery/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"api",
-						"delivery",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete delivery by id",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "dm124",
-							"type": "string"
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
-						{
-							"key": "username",
-							"value": "dm124",
-							"type": "string"
+						"url": {
+							"raw": "http://localhost:9090/api/delivery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"delivery"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "Get delivery by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/delivery/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"delivery",
+								"1"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:9090/api/delivery/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9090",
-					"path": [
-						"api",
-						"delivery",
-						"1"
-					]
+				{
+					"name": "Update delivery by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"orderId\": 1,\r\n        \"customerId\": 1,\r\n        \"receiverName\": \"Daniel\",\r\n        \"receiverCpf\": \"00000000000\",\r\n        \"isBuyer\": true,\r\n        \"dateTime\": \"2019-12-11\",\r\n        \"local\": \"SRS\",\r\n        \"status\": \"PENDENTE\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/delivery/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"delivery",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete delivery by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "dm124",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "dm124",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://mighty-bastion-41992.herokuapp.com/api/delivery/1",
+							"protocol": "https",
+							"host": [
+								"mighty-bastion-41992",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"delivery",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
